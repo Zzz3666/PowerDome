@@ -1,10 +1,6 @@
 """ app 入口"""
 import streamlit as st
-
-
-def page_header():
-    """ 页面顶端显示 """
-    st.title("主页")
-    st.divider()
+from app.page_header import page_header
 
 page_header()
+st.header("主页")
