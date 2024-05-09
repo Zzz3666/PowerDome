@@ -1,6 +1,5 @@
 """ app 入口"""
-import streamlit as st
+#import streamlit as st
 from app.page_header import page_header
 
-page_header()
-st.header("主页")
+page_header(title="主页")
