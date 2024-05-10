@@ -10,8 +10,8 @@ def page_header(title):
     st.title(title)
     st.divider()
 
+    st.sidebar.page_link("app.py",label="主页")
     page_root_path = "pages/"
-
     if os.path.exists("data/page.csv"):
         page_data = pd.read_csv("data/page.csv")
         for i in range(len(page_data)):
