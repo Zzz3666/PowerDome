@@ -1,42 +1,31 @@
 """ app 入口"""
 
+import os
 import streamlit as st
 import graphviz as gz  # type: ignore
+import pandas as pd
 from app.page_header import page_header
 
 page_header(title="主页")
-
-digital_power_supply_design_flow_data = [
-    "需求分析",
-    "拓扑选择",
-    "系统设计",
-    "硬件设计",
-    "软件开发",
-    "仿真分析",
-    "原型制作",
-    "测试调试",
-    "优化改进",
-    "认证标准",
-    "生产准备",
-    "质量控制",
-]
 
 st.header("数字电源设计流程")
 st.divider()
 digital_power_supply_design_flow = gz.Digraph()
 digital_power_supply_design_flow.attr("node", shape="box")
-for index, digital_power_supply_design_flow_name in enumerate(
-    digital_power_supply_design_flow_data
-):
-    digital_power_supply_design_flow.node(
-        digital_power_supply_design_flow_name, width="2.0", height="0.5"
-    )
-for index in range(len(digital_power_supply_design_flow_data) - 1):
-    digital_power_supply_design_flow.edge(
-        digital_power_supply_design_flow_data[index],
-        digital_power_supply_design_flow_data[index + 1],
-    )
-st.graphviz_chart(digital_power_supply_design_flow)
+if os.path.exists("data/page.csv"):
+    page_data = pd.read_csv("data/page.csv")
+    for index, digital_power_supply_design_flow_name in enumerate(
+        page_data.iloc[:, 1]
+    ):
+        digital_power_supply_design_flow.node(
+            digital_power_supply_design_flow_name, width="2.0", height="0.5"
+        )
+    for index in range(len(page_data) - 1):
+        digital_power_supply_design_flow.edge(
+            str(page_data.iloc[index,1]),
+            str(page_data.iloc[index + 1,1]),
+        )
+    st.graphviz_chart(digital_power_supply_design_flow)
 
 st.header("更多功能")
 st.divider()
