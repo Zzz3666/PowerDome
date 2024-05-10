@@ -5,11 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "更新依赖库",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pip",
+            "args": [
+                "install",
+                "-r",
+                "requirements.txt"
+            ],
+        },
+        {
             "name": "运行 app",
             "type": "debugpy",
             "request": "launch",
             "module": "streamlit",
-            "args": ["run", "app.py"],
+            "args": [
+                "run",
+                "app.py"
+            ],
             "console": "integratedTerminal"
         }
     ]
