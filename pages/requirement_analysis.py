@@ -12,7 +12,26 @@ st.subheader("WEB APP 交互需求")
 st.divider()
 st.write(
     """
- - 更好展示电压设计细节和设计流程
- - 丰富的控制内容
+ - 更好展示电源设计细节和设计流程
+ - 丰富的用户控制内容
+
+#### 需求分析
+
+##### 框架选择
+
+Streamlit
+
+##### 框架环境
+
+Python
+
+##### 环境依赖
+
+Linux
+
+##### Linux 平台
+
+xczu3eg-sfvc784-1-e
+
 """
 )
