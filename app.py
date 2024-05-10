@@ -21,6 +21,8 @@ digital_power_supply_design_flow_data = [
     "质量控制",
 ]
 
+st.header("数字电源设计流程")
+st.divider()
 digital_power_supply_design_flow = gz.Digraph()
 digital_power_supply_design_flow.attr("node", shape="box")
 for index, digital_power_supply_design_flow_name in enumerate(
@@ -35,3 +37,7 @@ for index in range(len(digital_power_supply_design_flow_data) - 1):
         digital_power_supply_design_flow_data[index + 1],
     )
 st.graphviz_chart(digital_power_supply_design_flow)
+
+st.header("更多功能")
+st.divider()
+st.write("通过侧边栏选择更多功能")
