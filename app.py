@@ -22,6 +22,13 @@ digital_power_supply_design_flow_data = [
 ]
 
 digital_power_supply_design_flow = gz.Digraph()
+digital_power_supply_design_flow.attr("node", shape="box")
+for index, digital_power_supply_design_flow_name in enumerate(
+    digital_power_supply_design_flow_data
+):
+    digital_power_supply_design_flow.node(
+        digital_power_supply_design_flow_name, width="2.0", height="0.5"
+    )
 for index in range(len(digital_power_supply_design_flow_data) - 1):
     digital_power_supply_design_flow.edge(
         digital_power_supply_design_flow_data[index],
