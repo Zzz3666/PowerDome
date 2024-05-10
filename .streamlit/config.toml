@@ -64,10 +64,10 @@
 # Default: "auto"
 # toolbarMode = "auto"
 
-# Controls whether the default sidebar page navigation in a multi-page app is displayed.
+# 控制是否显示多页面应用中的默认侧边栏页面导航。
 
 # Default: true
-# showSidebarNavigation = true
+showSidebarNavigation = false
 
 
 [runner]
