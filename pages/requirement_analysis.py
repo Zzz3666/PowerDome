@@ -27,9 +27,9 @@ Python
 
 ##### 环境依赖
 
-Linux
+Petalinux
 
-##### Linux 平台
+##### Petalinux 平台
 
 xczu3eg-sfvc784-1-e
 

@@ -5,11 +5,5 @@ from app.page_header import page_header
 
 page_header(title="软件开发")
 
-st.header("Petalinux 编译")
-st.divider()
+st.header("Petalinux 配置")
 
-st.header("Python 编译")
-st.divider()
-
-st.header("WEB APP 开发")
-st.divider()
