@@ -17,5 +17,18 @@ st.divider()
 st.write("Deepin 20.9")
 st.write("Windows 11 Home 21H2")
 
+st.header("Petalinux")
+st.divider()
+st.code(""" bash
+sudo apt-get update
+sudo apt-get install libncurses5-dev 
+sudo apt-get install tftpd
+sudo apt-get install xterm
+sudo apt-get install autoconf
+sudo apt-get install libtool
+chmod 755 ./petalinux-v<petalinux-version>-final-installer.run
+./petalinux-v<petalinux-version>-final-installer.run 
+""")
+
 st.header("Petalinux 配置")
 st.divider()
